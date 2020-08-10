@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 import django_heroku
 import dotenv
+import logging
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -28,8 +29,12 @@ if os.path.isfile(dotenv_file):
 
 SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-ALLOWED_HOST = ['*']
+DEBUG = False
+
+if DEBUG is False:
+    ALLOWED_HOST = ['rocck.herokuapp.com', 'localhost']
+else:
+    ALLOWED_HOST = ['localhost']
 
 
 # Application definition
@@ -134,7 +139,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-STATICSTORAGE = "Whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = 'Code_Buddy.storage.WhiteNoiseStaticFilesStorage'
+# STATICSTORAGE = "Whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -143,3 +149,20 @@ MEDIA_URL = '/media/'
 
 
 django_heroku.settings(locals())
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+        },
+    },
+}
