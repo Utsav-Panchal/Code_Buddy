@@ -29,11 +29,7 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-if DEBUG is False:
-    ALLOWED_HOSTS = ['127.0.0.1', 'rocck.herokuapp.com', '0.0.0.0', 'https://rocck.herokuapp.com/']
-if DEBUG is True:
-    ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = [".herokuapp.com"]
 
 # Application definition
 
@@ -130,13 +126,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-# STATICSTORAGE = "Whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+STATICSTORAGE = "Whitenoise.storage.CompressedManifestStaticFilesStorage"
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, "static"),
 #     os.path.join(BASE_DIR, "staticfiles"),
 # ]
-COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
