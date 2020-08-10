@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'Code_Buddy.wsgi.application'
 
 DATABASES = {
     "default": {
-        "ENGINE" : "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3")
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": 'd35co8d9cbvmtf',
+        'HOST': 'ec2-34-200-15-192.compute-1.amazonaws.com',
+        'USER': 'aaegxykgjooqrb',
+        'PASSWORD': '4dbaaf11095684cac2bef57087778ce9486ab647fc415956248e748f8b684e4b',
+        'PORT': 5432,
     }
 }
 
