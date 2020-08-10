@@ -3,7 +3,7 @@
 Website of sharing any text.
 
 ## Clone This Project (Make Sure You Have Git Installed):
-https://github.com/mustafamuratcoskun/DjangoBlogApp.git
+https://github.com/Utsav-Panchal/Code_Buddy.git
 
 ## Install Dependencies
 pip install -r requierements.txt
