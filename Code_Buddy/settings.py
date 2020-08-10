@@ -33,7 +33,7 @@ DEBUG = False
 if DEBUG is False:
     ALLOWED_HOSTS = ['127.0.0.1', 'rocck.herokuapp.com', '0.0.0.0', 'https://rocck.herokuapp.com/']
 if DEBUG is True:
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['*']
 
 # Application definition
 
