@@ -13,4 +13,4 @@ urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.ME
 
 
 handler404 = 'baseApp.views.handler404'
-# handler500 = 'baseApp.views.handler500'
+handler500 = 'baseApp.views.handler500'
