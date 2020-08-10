@@ -30,7 +30,6 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", 'rocck.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -91,6 +90,7 @@ DATABASES = {
         'PORT': 5432,
     }
 }
+
 
 
 # Password validation
