@@ -5,7 +5,7 @@ from .views import index, upload_image_view
 
 
 urlpatterns = [
-    path('/', index, name="copypaste_index"),
+    path('', index, name="copypaste_index"),
     path('img', upload_image_view, name="upload_image"),
 ]
 
