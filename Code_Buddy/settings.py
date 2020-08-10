@@ -32,7 +32,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = False
 
 if DEBUG is False:
-    ALLOWED_HOST = ['rocck.herokuapp.com', 'localhost']
+    ALLOWED_HOST = ['.herokuapp.com', 'localhost']
 else:
     ALLOWED_HOST = ['localhost']
 
@@ -88,10 +88,10 @@ WSGI_APPLICATION = 'Code_Buddy.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": 'd35co8d9cbvmtf',
-        'HOST': 'ec2-34-200-15-192.compute-1.amazonaws.com',
-        'USER': 'aaegxykgjooqrb',
-        'PASSWORD': '4dbaaf11095684cac2bef57087778ce9486ab647fc415956248e748f8b684e4b',
+        "NAME": '',
+        'HOST': '',
+        'USER': '',
+        'PASSWORD': '',
         'PORT': 5432,
     }
 }
