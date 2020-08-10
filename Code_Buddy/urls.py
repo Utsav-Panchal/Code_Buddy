@@ -22,3 +22,4 @@ urlpatterns = [
 ]
 
 handler404 = 'baseApp.views.handler404'
+handler500 = 'baseApp.views.handler500'
