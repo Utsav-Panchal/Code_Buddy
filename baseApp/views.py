@@ -60,9 +60,3 @@ def upload_image_view(request):
                 print("Success")
                 return HttpResponseRedirect("/img")
         return render(request, 'upload_image.html', {'form': form})
-
-
-def handler404(request, exception):
-    return render(request, '404error.html', locals(), status=404)
-
-
