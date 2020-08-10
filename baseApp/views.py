@@ -63,10 +63,6 @@ def upload_image_view(request):
 
 
 def handler404(request, exception):
-    context = {}
-    return render(request, '404error.html', locals(), context, status=404)
+    return render(request, '404error.html', locals(), status=404)
 
 
-def handler500(request, exception):
-    context = {}
-    return render(request, '500error.html', locals(), context, status=500)
