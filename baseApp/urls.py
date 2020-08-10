@@ -5,8 +5,8 @@ from .views import index, upload_image_view
 
 
 urlpatterns = [
-    path('', index, name="copypaste_index"),
-    path('img', upload_image_view, name="upload_image"),
+    path('/', index, name="copypaste_index"),
+    path('img/', upload_image_view, name="upload_image"),
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
